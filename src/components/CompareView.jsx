@@ -1,28 +1,28 @@
 import { useState } from 'react'
 import TierBadge from './TierBadge'
-import { CompareRadar } from './CountryRadar'
 
 function generateComparison(a, b) {
-  const cDiff = a.complexity.total - b.complexity.total
-  const sDiff = a.sovereignty.total - b.sovereignty.total
-  const bcDiff = Math.abs(a.binding_constraint - b.binding_constraint)
-
   const parts = []
+  const cDiff = +(a.complexity.total - b.complexity.total).toFixed(1)
+  const sDiff = +(a.sovereignty.total - b.sovereignty.total).toFixed(1)
+  const bcDiff = +(Math.abs(a.binding_constraint - b.binding_constraint)).toFixed(1)
 
   if (Math.abs(cDiff) >= 0.5) {
-    const winner = cDiff > 0 ? a.name : b.name
-    const loser = cDiff > 0 ? b.name : a.name
-    parts.push(`${winner} outperforms ${loser} on complexity by ${Math.abs(cDiff).toFixed(1)} points.`)
+    const [w, l] = cDiff > 0 ? [a.name, b.name] : [b.name, a.name]
+    parts.push(`${w} outperforms ${l} on complexity by ${Math.abs(cDiff)} points.`)
+  } else {
+    parts.push(`${a.name} and ${b.name} are tied on complexity at ${a.complexity.total}.`)
   }
 
   if (Math.abs(sDiff) >= 0.5) {
-    const winner = sDiff > 0 ? a.name : b.name
-    const loser = sDiff > 0 ? b.name : a.name
-    parts.push(`${winner} outperforms ${loser} on sovereignty by ${Math.abs(sDiff).toFixed(1)} points.`)
+    const [w, l] = sDiff > 0 ? [a.name, b.name] : [b.name, a.name]
+    parts.push(`${w} outperforms ${l} on sovereignty by ${Math.abs(sDiff)} points.`)
+  } else {
+    parts.push(`Their sovereignty scores are equal at ${a.sovereignty.total}.`)
   }
 
   if (bcDiff > 0) {
-    parts.push(`Their binding constraints differ by ${bcDiff.toFixed(1)}.`)
+    parts.push(`Their binding constraints differ by ${bcDiff} — ${a.binding_constraint} vs ${b.binding_constraint}.`)
   } else {
     parts.push(`Their binding constraints are identical at ${a.binding_constraint}.`)
   }
@@ -30,98 +30,98 @@ function generateComparison(a, b) {
   return parts.join(' ')
 }
 
-export default function CompareView({ countries }) {
+const METRICS = [
+  { key: 'complexity',         label: 'Complexity',         color: 'var(--complexity)',  getValue: c => c.complexity.total },
+  { key: 'sovereignty',        label: 'Sovereignty',        color: 'var(--sovereignty)', getValue: c => c.sovereignty.total },
+  { key: 'binding_constraint', label: 'Binding Constraint', color: 'var(--binding)',     getValue: c => c.binding_constraint },
+  { key: 'gap',                label: 'Gap',                color: 'var(--muted)',       getValue: c => c.gap },
+]
+
+const COLORS_A = 'var(--complexity)'
+const COLORS_B = 'var(--sovereignty)'
+
+export default function CompareView({ countries, cohortLabels }) {
   const [idA, setIdA] = useState('germany')
   const [idB, setIdB] = useState('russia')
 
-  const countryA = countries.find(c => c.id === idA)
-  const countryB = countries.find(c => c.id === idB)
+  const a = countries.find(c => c.id === idA)
+  const b = countries.find(c => c.id === idB)
+
+  const sorted = [...countries].sort((x, y) => x.name.localeCompare(y.name))
 
   return (
     <div>
       <div className="compare-selectors">
-        <div className="compare-selector-group">
-          <label>Country A</label>
-          <select value={idA} onChange={e => setIdA(e.target.value)}>
-            {countries.map(c => (
-              <option key={c.id} value={c.id}>{c.name}</option>
-            ))}
-          </select>
-        </div>
-        <div className="compare-selector-group">
-          <label>Country B</label>
-          <select value={idB} onChange={e => setIdB(e.target.value)}>
-            {countries.map(c => (
-              <option key={c.id} value={c.id}>{c.name}</option>
-            ))}
-          </select>
-        </div>
+        {[['Country A', idA, setIdA, COLORS_A], ['Country B', idB, setIdB, COLORS_B]].map(([label, val, setter, color]) => (
+          <div className="compare-selector-group" key={label}>
+            <label style={{ color }}>{label}</label>
+            <select value={val} onChange={e => setter(e.target.value)}>
+              {sorted.map(c => (
+                <option key={c.id} value={c.id}>{c.name}</option>
+              ))}
+            </select>
+          </div>
+        ))}
       </div>
 
       <div className="compare-columns">
-        {[countryA, countryB].map((country, idx) => (
-          <div className="compare-column" key={country.id}>
+        {[a, b].map((c, i) => (
+          <div className="compare-column" key={c.id}>
             <h2>
-              {country.name}
-              <TierBadge tier={country.tier} />
+              {c.name}
+              <TierBadge tier={c.tier} />
             </h2>
-            <div className="compare-score-blocks">
-              <div className="compare-score-row">
-                <span className="compare-score-row-label">Complexity</span>
-                <span className="compare-score-row-value" style={{ color: 'var(--complexity)' }}>
-                  {country.complexity.total}
-                </span>
-              </div>
-              <div className="compare-score-row">
-                <span className="compare-score-row-label">Sovereignty</span>
-                <span className="compare-score-row-value" style={{ color: 'var(--sovereignty)' }}>
-                  {country.sovereignty.total}
-                </span>
-              </div>
-              <div className="compare-score-row">
-                <span className="compare-score-row-label">Binding Constraint</span>
-                <span className="compare-score-row-value" style={{ color: 'var(--binding)' }}>
-                  {country.binding_constraint}
-                </span>
-              </div>
-              <div className="compare-score-row">
-                <span className="compare-score-row-label">Gap</span>
-                <span className="compare-score-row-value">{country.gap}</span>
-              </div>
+            <div className="compare-score-list">
+              {METRICS.map(m => (
+                <div className="compare-score-row" key={m.key}>
+                  <span className="compare-score-row-label">{m.label}</span>
+                  <span className="compare-score-row-value" style={{ color: m.color }}>
+                    {m.getValue(c)}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         ))}
       </div>
 
-      <div className="compare-radar-section">
-        <h3>Radar comparison — all 15 dimensions</h3>
-        <CompareRadar countryA={countryA} countryB={countryB} />
-        <div className="compare-radar-legend">
-          <div className="compare-radar-legend-item">
-            <div className="legend-dot" style={{ background: '#185FA5' }} />
-            {countryA.name}
-          </div>
-          <div className="compare-radar-legend-item">
-            <div className="legend-dot" style={{ background: '#3B6D11' }} />
-            {countryB.name}
-          </div>
+      <div className="compare-chart-section">
+        <h3>Score comparison</h3>
+        <div className="compare-bar-group">
+          {METRICS.map(m => (
+            <div className="compare-bar-metric" key={m.key}>
+              <div className="compare-bar-metric-label">{m.label}</div>
+              {[a, b].map((c, i) => {
+                const val = m.getValue(c)
+                const pct = Math.min(100, (val / 10) * 100)
+                const color = i === 0 ? COLORS_A : COLORS_B
+                return (
+                  <div className="compare-bar-row" key={c.id}>
+                    <span className="compare-bar-name">{c.name}</span>
+                    <div className="compare-bar-track">
+                      <div className="compare-bar-fill" style={{ width: `${pct}%`, background: color }} />
+                    </div>
+                    <span className="compare-bar-val" style={{ color }}>{val}</span>
+                  </div>
+                )
+              })}
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="compare-signals">
-        <div className="compare-signal-block">
-          <h4>{countryA.name} — Key Signal</h4>
-          <p>{countryA.key_signal}</p>
-        </div>
-        <div className="compare-signal-block">
-          <h4>{countryB.name} — Key Signal</h4>
-          <p>{countryB.key_signal}</p>
-        </div>
+        {[a, b].map(c => (
+          <div className="compare-signal-block" key={c.id}>
+            <h4>{c.name} — Key Signal</h4>
+            <p>{c.key_signal}</p>
+          </div>
+        ))}
       </div>
 
       <div className="compare-summary">
         <h3>Comparison</h3>
-        <p>{generateComparison(countryA, countryB)}</p>
+        <p>{generateComparison(a, b)}</p>
       </div>
     </div>
   )
