@@ -1,0 +1,436 @@
+[
+  {
+    "id": "usa",
+    "name": "USA",
+    "complexity": {
+      "total": 8,
+      "q1_export_uniqueness": 2,
+      "q2_trajectory": 1,
+      "q3_dutch_disease": 2,
+      "q4_brain_drain": 2,
+      "q5_fdi_quality": 1,
+      "notes": "Aerospace, pharma, semis, aircraft, medical devices — few peers. Some commodity creep in petroleum exports."
+    },
+    "sovereignty": {
+      "total": 8.5,
+      "q1_airframe_engine": 1,
+      "q2_nuclear": 1,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 1,
+      "q7_build_domestically": 0.5,
+      "q8_survive_without_alliance": 1,
+      "q9_edge_chips": 1,
+      "q10_autonomous_ops": 0.5,
+      "notes": "Full nuclear sovereignty, domestic jet engines, ITAR control over others' systems. Institutional procurement speed is the binding constraint, not capability."
+    },
+    "binding_constraint": 8,
+    "gap": 0.5,
+    "tier": 1,
+    "key_signal": "The world's deepest complexity-sovereignty stack — until you look at the joints. F-35 software routes through American infrastructure that allies are actively designing around, and the Replicator autonomous systems program failed its own fielding test. The binding constraint isn't capability; it's institutional speed. The gap between what the US can imagine and what it can procure and deploy is itself a strategic vulnerability."
+  },
+  {
+    "id": "france",
+    "name": "France",
+    "complexity": {
+      "total": 8,
+      "q1_export_uniqueness": 2,
+      "q2_trajectory": 1,
+      "q3_dutch_disease": 2,
+      "q4_brain_drain": 1.5,
+      "q5_fdi_quality": 1.5,
+      "notes": "Aerospace (Airbus, Safran), nuclear engineering, luxury goods, pharmaceuticals. Consistent export sophistication with limited commodity exposure."
+    },
+    "sovereignty": {
+      "total": 7.5,
+      "q1_airframe_engine": 1,
+      "q2_nuclear": 1,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 1,
+      "q7_build_domestically": 0.5,
+      "q8_survive_without_alliance": 0.5,
+      "q9_edge_chips": 0.5,
+      "q10_autonomous_ops": 0.5,
+      "notes": "Independent nuclear deterrent, domestic Rafale production, export freedom unconstrained by US ITAR. Chip and autonomous-systems gaps are real but manageable."
+    },
+    "binding_constraint": 7.5,
+    "gap": 0.5,
+    "tier": 1,
+    "key_signal": "France is the only country outside the US-UK-Russia-China quadrant that built and operates a fully sovereign nuclear-conventional-industrial triad. The Rafale's export record against F-35 competitors shows what ITAR-free status is worth commercially. The strategic question is whether France can maintain that posture as defense budgets consolidate around US platforms under NATO pressure."
+  },
+  {
+    "id": "germany",
+    "name": "Germany",
+    "complexity": {
+      "total": 9,
+      "q1_export_uniqueness": 2,
+      "q2_trajectory": 1.5,
+      "q3_dutch_disease": 2,
+      "q4_brain_drain": 2,
+      "q5_fdi_quality": 1.5,
+      "notes": "The world's leading exporter of embedded industrial complexity — machine tools, specialty chemicals, precision engineering. No peer for Mittelstand export depth."
+    },
+    "sovereignty": {
+      "total": 3,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0.5,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 0,
+      "q7_build_domestically": 0.5,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0.5,
+      "notes": "No nuclear deterrent, no sovereign jet engine, strategic doctrine outsourced to NATO and US extended deterrence. Industrial base exists but political-military sovereignty does not."
+    },
+    "binding_constraint": 3,
+    "gap": 6,
+    "tier": 3,
+    "key_signal": "Germany is the starkest complexity-sovereignty divergence in the dataset. The country that builds the machines the world uses to make things cannot field an independent military force, has no nuclear deterrent, and spent two decades deepening energy dependence on an adversary. Wirtschaftswunder produced a Sovereign Deficit. The question post-2022 is whether Zeitenwende is a genuine reorientation or a budget announcement."
+  },
+  {
+    "id": "south_korea",
+    "name": "South Korea",
+    "complexity": {
+      "total": 8,
+      "q1_export_uniqueness": 2,
+      "q2_trajectory": 2,
+      "q3_dutch_disease": 2,
+      "q4_brain_drain": 1,
+      "q5_fdi_quality": 1,
+      "notes": "Semiconductors, shipbuilding, EV batteries, consumer electronics, defense exports. Rapid trajectory improvement; chips and batteries are chokepoint technologies."
+    },
+    "sovereignty": {
+      "total": 6,
+      "q1_airframe_engine": 0.5,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 1,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 0.5,
+      "q7_build_domestically": 1,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0.5,
+      "q10_autonomous_ops": 0.5,
+      "notes": "Growing domestic defense production (K2 tank, K9 howitzer, FA-50 jet), strong arms export record. Cannot survive without US alliance; no nuclear deterrent under pressure."
+    },
+    "binding_constraint": 6,
+    "gap": 2,
+    "tier": 2,
+    "key_signal": "South Korea is building one of the most impressive defense-industrial bases in the world at speed — K2 tanks to Poland, naval vessels to multiple navies, missiles to anyone who asks. The complexity foundation is world-class in the technologies that matter most (chips, batteries). The sovereignty ceiling is the US alliance: absent American extended deterrence, the calculus changes entirely."
+  },
+  {
+    "id": "china",
+    "name": "China",
+    "complexity": {
+      "total": 7,
+      "q1_export_uniqueness": 1.5,
+      "q2_trajectory": 2,
+      "q3_dutch_disease": 2,
+      "q4_brain_drain": 0.5,
+      "q5_fdi_quality": 1,
+      "notes": "Massive manufacturing depth but questions on genuine frontier complexity versus scale. EV and solar are real; semiconductor design lags fabrication controls. Trajectory is upward but uneven."
+    },
+    "sovereignty": {
+      "total": 9.5,
+      "q1_airframe_engine": 1,
+      "q2_nuclear": 1,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 1,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 1,
+      "q7_build_domestically": 1,
+      "q8_survive_without_alliance": 1,
+      "q9_edge_chips": 0.5,
+      "q10_autonomous_ops": 1,
+      "notes": "Near-total sovereign defense stack: nuclear triad, indigenous jet engines (with caveats), sovereign software, no alliance dependencies. Edge chip access constrained by export controls but workarounds in progress."
+    },
+    "binding_constraint": 7,
+    "gap": 2.5,
+    "tier": 1,
+    "key_signal": "China's sovereignty score is nearly perfect — the PLA can field, sustain, and command systems without foreign permission at any level. The complexity score lags because genuine frontier innovation (not scale manufacturing) remains contested, and the chip gap is real. The strategic question is sequencing: China can absorb economic complexity losses more than most states can absorb sovereignty losses. The binding constraint is the economy, not the military."
+  },
+  {
+    "id": "russia",
+    "name": "Russia",
+    "complexity": {
+      "total": 3,
+      "q1_export_uniqueness": 0.5,
+      "q2_trajectory": 0.5,
+      "q3_dutch_disease": 0.5,
+      "q4_brain_drain": 1,
+      "q5_fdi_quality": 0.5,
+      "notes": "Hydrocarbons dominate exports. Defense-industrial base is real but operates on Soviet inheritance and wartime surge. Civilian technology exports are minimal; brain drain is severe."
+    },
+    "sovereignty": {
+      "total": 8,
+      "q1_airframe_engine": 1,
+      "q2_nuclear": 1,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 1,
+      "q5_others_seek_your_tech": 0.5,
+      "q6_consistent_doctrine": 1,
+      "q7_build_domestically": 1,
+      "q8_survive_without_alliance": 1,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0.5,
+      "notes": "Full nuclear sovereignty, domestic engines and airframes, operates without alliance permission. Edge chip gap is now operationally significant after Ukraine losses and export controls."
+    },
+    "binding_constraint": 3,
+    "gap": 5,
+    "tier": 3,
+    "key_signal": "Russia is a sovereignty giant sitting on a complexity dwarf — the most extreme version of this divergence in the dataset. The military can act without external permission at scale. The economy cannot sustain that capacity without commodity rents and imported technology. Ukraine has revealed the depth of the dependency: microelectronics, machine tools, and precision manufacturing all route through adversaries. The binding constraint is the economy, not the warhead count."
+  },
+  {
+    "id": "netherlands",
+    "name": "Netherlands",
+    "complexity": {
+      "total": 7,
+      "q1_export_uniqueness": 2,
+      "q2_trajectory": 1,
+      "q3_dutch_disease": 1.5,
+      "q4_brain_drain": 1.5,
+      "q5_fdi_quality": 1,
+      "notes": "ASML is the most strategically important company in the world for semiconductor manufacturing. Logistics, chemicals, and agri-tech add depth. The Dutch Disease risk is real but currently managed."
+    },
+    "sovereignty": {
+      "total": 1,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 0.5,
+      "q6_consistent_doctrine": 0,
+      "q7_build_domestically": 0,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "NATO-dependent, no domestic deterrent, F-35 purchase confirms US reliance. ASML's export controls are now imposed by US executive order, not Dutch sovereign decision."
+    },
+    "binding_constraint": 1,
+    "gap": 6,
+    "tier": 4,
+    "key_signal": "The Netherlands controls the most critical chokepoint in global semiconductor manufacturing — ASML's EUV machines have no alternative source for advanced chip production anywhere on earth. And yet: when Washington told ASML to stop shipping to China, it stopped. The Netherlands holds a monopoly asset it does not control. This is the defining example of complexity without sovereignty: the leverage belongs to whoever holds the political key."
+  },
+  {
+    "id": "belgium",
+    "name": "Belgium",
+    "complexity": {
+      "total": 6,
+      "q1_export_uniqueness": 1.5,
+      "q2_trajectory": 0.5,
+      "q3_dutch_disease": 1.5,
+      "q4_brain_drain": 1.5,
+      "q5_fdi_quality": 1,
+      "notes": "Specialty chemicals, pharmaceuticals, diamonds, and FN Herstal (small arms manufacturer). Moderate complexity depth with some unique industrial niches."
+    },
+    "sovereignty": {
+      "total": 0,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0,
+      "q5_others_seek_your_tech": 0,
+      "q6_consistent_doctrine": 0,
+      "q7_build_domestically": 0,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "Zero measurable sovereign defense capacity. Hosts NATO HQ and US nuclear weapons under dual-key arrangements it does not control. Security policy is entirely outsourced."
+    },
+    "binding_constraint": 0,
+    "gap": 6,
+    "tier": 4,
+    "key_signal": "Belgium scores zero on sovereignty — the only country in the dataset to do so. It hosts NATO's headquarters and stores US B61 nuclear gravity bombs under arrangements where Belgian pilots would deliver weapons they do not control, on targets they did not select, under doctrine they did not write. This is not a criticism; it is a deliberate strategic choice. The question is what happens to that choice when the guarantor reassesses its commitments."
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "complexity": {
+      "total": 5,
+      "q1_export_uniqueness": 1,
+      "q2_trajectory": 0.5,
+      "q3_dutch_disease": 1,
+      "q4_brain_drain": 1,
+      "q5_fdi_quality": 1.5,
+      "notes": "AI research clusters and resource extraction coexist uncomfortably. Bombardier aerospace and nuclear technology are genuine complexity assets. Brain drain to US is structural."
+    },
+    "sovereignty": {
+      "total": 1,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 0.5,
+      "q6_consistent_doctrine": 0,
+      "q7_build_domestically": 0,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "Defense entirely embedded in US architecture — NORAD, Five Eyes, F-35 purchase. Cannot sustain independent operations. Sovereignty score reflects geographic and institutional reality."
+    },
+    "binding_constraint": 1,
+    "gap": 4,
+    "tier": 4,
+    "key_signal": "Canada's complexity score undersells its technological depth — world-class AI research, nuclear technology, and aerospace — but its sovereignty score is effectively a measurement of how completely it has embedded itself in US security architecture. NORAD integration means Canadian airspace defense is operationally American. The gap is large, but unlike Belgium or the Netherlands, Canada has the resource and industrial base to change that trajectory if the political decision were made."
+  },
+  {
+    "id": "finland",
+    "name": "Finland",
+    "complexity": {
+      "total": 6,
+      "q1_export_uniqueness": 1.5,
+      "q2_trajectory": 1,
+      "q3_dutch_disease": 1.5,
+      "q4_brain_drain": 1,
+      "q5_fdi_quality": 1,
+      "notes": "Nokia legacy, paper and forest industry, niche defense electronics. Moderate complexity, strong institutional capacity. Recent F-35 purchase signals NATO alignment over independence."
+    },
+    "sovereignty": {
+      "total": 1.5,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 0.5,
+      "q6_consistent_doctrine": 0.5,
+      "q7_build_domestically": 0,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "Pre-NATO accession Finland had genuine strategic autonomy culture; post-accession it is trading independence for collective defense guarantees. Consistent doctrine credit for decades of documented Finlandization management."
+    },
+    "binding_constraint": 1.5,
+    "gap": 4.5,
+    "tier": 4,
+    "key_signal": "Finland operated for decades with a sophisticated strategy for maintaining independence adjacent to a nuclear-armed adversary — Finlandization was not submission, it was calibrated autonomy. NATO accession traded that hard-won strategic flexibility for collective defense guarantees. Whether that trade was correct depends entirely on how reliable those guarantees prove. The F-35 purchase locks in the dependency: Finnish airspace defense will now run on American software."
+  },
+  {
+    "id": "poland",
+    "name": "Poland",
+    "complexity": {
+      "total": 5,
+      "q1_export_uniqueness": 1,
+      "q2_trajectory": 1.5,
+      "q3_dutch_disease": 1,
+      "q4_brain_drain": 0.5,
+      "q5_fdi_quality": 1,
+      "notes": "Strong manufacturing integration into German supply chains. Rising defense procurement suggests upward trajectory. Currently more assembly than frontier production."
+    },
+    "sovereignty": {
+      "total": 2,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 0.5,
+      "q6_consistent_doctrine": 0.5,
+      "q7_build_domestically": 0.5,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "Rapidly expanding defense spending (4%+ GDP) and Korean equipment purchases are building indigenous capacity. Still alliance-dependent and without deterrent. Direction is positive."
+    },
+    "binding_constraint": 2,
+    "gap": 3,
+    "tier": 3,
+    "key_signal": "Poland is spending more on defense as a share of GDP than almost any NATO member and buying the most capable systems available — K2 tanks, HIMARS, Abrams, FA-50 jets, Patriot. The direction is unambiguous. The question is whether procurement volume translates into sovereignty or just into expensive dependency. An army equipped entirely with other nations' systems is not sovereign; it is a well-armed client. The binding constraint is indigenous production capacity, not political will."
+  },
+  {
+    "id": "ukraine",
+    "name": "Ukraine",
+    "complexity": {
+      "total": 3,
+      "q1_export_uniqueness": 0.5,
+      "q2_trajectory": 1,
+      "q3_dutch_disease": 0.5,
+      "q4_brain_drain": 0.5,
+      "q5_fdi_quality": 0.5,
+      "notes": "Pre-war: aerospace (Motor Sich), IT services, and grain. War has destroyed physical capital but accelerated drone and electronic warfare innovation. Trajectory score reflects wartime adaptation."
+    },
+    "sovereignty": {
+      "total": 5,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0.5,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 1,
+      "q7_build_domestically": 1,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0.5,
+      "q10_autonomous_ops": 1,
+      "notes": "Operating the world's most active drone and EW laboratory. Others are buying Ukrainian tactical lessons. Consistent doctrine under existential pressure. Cannot survive without Western material support."
+    },
+    "binding_constraint": 3,
+    "gap": 2,
+    "tier": 3,
+    "key_signal": "Ukraine has developed the world's most battle-tested unmanned systems doctrine under live fire conditions that no exercise can replicate. The sovereignty score is artificially bounded by the inability to survive without Western ammunition and financial support — but the military-operational innovation score would rank near the top of any dataset. The binding constraint is the industrial base, not the operational concept. Ukraine knows how to fight this war; it needs the means to sustain it."
+  },
+  {
+    "id": "brazil",
+    "name": "Brazil",
+    "complexity": {
+      "total": 4,
+      "q1_export_uniqueness": 1,
+      "q2_trajectory": 0.5,
+      "q3_dutch_disease": 0.5,
+      "q4_brain_drain": 1,
+      "q5_fdi_quality": 1,
+      "notes": "Embraer is a genuine complexity asset in regional aviation. Agribusiness and mining dominate exports. Dutch disease pressure is real; complexity trajectory is flat to declining."
+    },
+    "sovereignty": {
+      "total": 0,
+      "q1_airframe_engine": 0,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 0,
+      "q4_software_sovereign": 0,
+      "q5_others_seek_your_tech": 0,
+      "q6_consistent_doctrine": 0,
+      "q7_build_domestically": 0,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0,
+      "notes": "No meaningful sovereign defense stack. Embraer KC-390 tanker/transport is a partial exception. Nuclear program was civilian; no weapons path pursued. Strategic doctrine is non-aligned in name, dependent in practice."
+    },
+    "binding_constraint": 0,
+    "gap": 4,
+    "tier": 4,
+    "key_signal": "Brazil has Embraer — one of the three genuinely competitive commercial aircraft manufacturers on earth — and almost nothing else in the sovereignty column. The KC-390 military transport is a real capability. But the broader defense-industrial base is thin, the nuclear program is civilian, and strategic doctrine is non-alignment that functions in practice as absence. The commodity export base creates Dutch disease pressure on exactly the manufacturing sectors that would produce sovereignty."
+  },
+  {
+    "id": "turkiye",
+    "name": "Turkiye",
+    "complexity": {
+      "total": 5,
+      "q1_export_uniqueness": 1,
+      "q2_trajectory": 1.5,
+      "q3_dutch_disease": 1,
+      "q4_brain_drain": 0.5,
+      "q5_fdi_quality": 1,
+      "notes": "Strong defense-industrial trajectory: Bayraktar drones, Aselsan electronics, ROKETSAN missiles. Civilian manufacturing integration into EU supply chains. Complexity trajectory is the strongest in the dataset outside East Asia."
+    },
+    "sovereignty": {
+      "total": 5.5,
+      "q1_airframe_engine": 0.5,
+      "q2_nuclear": 0,
+      "q3_arms_sales_free": 1,
+      "q4_software_sovereign": 1,
+      "q5_others_seek_your_tech": 1,
+      "q6_consistent_doctrine": 0.5,
+      "q7_build_domestically": 1,
+      "q8_survive_without_alliance": 0,
+      "q9_edge_chips": 0,
+      "q10_autonomous_ops": 0.5,
+      "notes": "Bayraktar TB2 has proven export demand; S-400 purchase demonstrated willingness to defy alliance pressure. Domestic drone and missile production is real. No nuclear deterrent; engine sovereignty incomplete."
+    },
+    "binding_constraint": 5,
+    "gap": 0.5,
+    "tier": 2,
+    "key_signal": "Turkiye has done something unusual: built a defense-industrial base that other states want to buy from, without starting from a Cold War inheritance. The Bayraktar TB2's combat record across four continents is a genuine proof of concept. The S-400 purchase was sovereignty signaling with real costs paid. The binding constraint is economic complexity — if the lira-inflation cycle continues to hollow out the middle-class industrial workforce, the defense trajectory stalls."
+  }
+]
