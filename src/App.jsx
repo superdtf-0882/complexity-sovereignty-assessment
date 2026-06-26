@@ -76,7 +76,7 @@ export default function App() {
             <h1 className="app-title">Complexity–Sovereignty Assessment</h1>
             <p className="app-subtitle">
               Companion tool to{' '}
-              <a href="https://superdtf.substack.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://superdtf.substack.com/p/the-defense-sovereignty-ladder" target="_blank" rel="noopener noreferrer">
                 superdtf.substack.com
               </a>
               {' '}· {countries.length} countries assessed

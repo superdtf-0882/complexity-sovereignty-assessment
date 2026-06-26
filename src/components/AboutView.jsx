@@ -89,7 +89,7 @@ export default function AboutView() {
       <Section title="About the author">
         <p>
           This tool is a companion to the essay series published at{' '}
-          <a href="https://superdtf.substack.com" target="_blank" rel="noopener noreferrer">superdtf.substack.com</a>.
+          <a href="https://superdtf.substack.com/p/the-defense-sovereignty-ladder" target="_blank" rel="noopener noreferrer">superdtf.substack.com</a>.
           The assessments were developed through research and analysis conducted in 2025–2026. Scores reflect conditions as assessed at time of publication and will be updated as the geopolitical landscape changes.
         </p>
       </Section>
