@@ -36,6 +36,46 @@
   letter-spacing: 0.02em;
 }
 
+/* ── Site breadcrumb + back-link (DS-004) ────── */
+
+.site-breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.site-breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.site-breadcrumb-sep {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+/* ── Site attribution (DS-008) ────────────────── */
+
+.site-attribution {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 30;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-attribution:hover {
+  color: var(--text);
+}
+
 /* ── Header ─────────────────────────────────── */
 
 .app-header {

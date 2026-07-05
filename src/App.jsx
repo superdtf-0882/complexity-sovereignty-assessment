@@ -76,6 +76,11 @@ export default function App() {
       </a>
       <header className="app-header">
         <div className="app-header-inner">
+          <div className="site-breadcrumb">
+            <a href="https://davidfacer.com/">← davidfacer.com</a>
+            <span className="site-breadcrumb-sep">/</span>
+            <span>Research</span>
+          </div>
           <div className="app-title-block">
             <h1 className="app-title">Complexity–Sovereignty Assessment</h1>
             <p className="app-subtitle">
@@ -142,6 +147,10 @@ export default function App() {
           {view === 'about' && <AboutView />}
         </div>
       </div>
+
+      <a href="https://davidfacer.com/" className="site-attribution">
+        © 2026 David Facer
+      </a>
     </div>
   )
 }
