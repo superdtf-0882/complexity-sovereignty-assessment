@@ -4,11 +4,43 @@
   min-height: 100vh;
 }
 
+/* ── Site identity mark ─────────────────────── */
+/* Matches the identity mark used across the rest of davidfacer.com — fixed
+   position, independent of this app's own light/dark theme variables, so
+   it looks the same everywhere. */
+
+.site-identity-mark {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.site-identity-mark img {
+  width: 36px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid #232730;
+}
+
+.site-identity-mark span {
+  font-size: 14px;
+  color: #868c97;
+  letter-spacing: 0.02em;
+}
+
 /* ── Header ─────────────────────────────────── */
 
 .app-header {
   border-bottom: 1px solid var(--border);
-  padding: 20px 24px 0;
+  padding: 76px 24px 0;
 }
 
 .app-header-inner {
@@ -775,7 +807,7 @@
 }
 
 @media (max-width: 600px) {
-  .app-header { padding: 16px 16px 0; }
+  .app-header { padding: 76px 16px 0; }
   .app-body   { padding: 20px 16px 48px; }
   .tab-btn    { padding: 8px 10px; font-size: 13px; }
   .grid-table th, .grid-table td { padding: 9px 8px; }

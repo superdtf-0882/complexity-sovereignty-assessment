@@ -70,6 +70,10 @@ export default function App() {
 
   return (
     <div className="app">
+      <a href="https://davidfacer.com/" className="site-identity-mark">
+        <img src={`${import.meta.env.BASE_URL}HeadshotBW.jpg`} alt="" />
+        <span>David Facer</span>
+      </a>
       <header className="app-header">
         <div className="app-header-inner">
           <div className="app-title-block">
